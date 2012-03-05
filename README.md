@@ -3,7 +3,7 @@
 ## About
 Sublime Console/CFDUMP/Abort Finder is a Sublime Text 2 plugin designed to allow
 users an easy way to find code in ColdFusion and JavaScript source that may
-contain commands like *console.log()*, *<cfdump>*, or *<cfabort>*.
+contain commands like *console.log()*, *&lt;cfdump&gt;*, or *&lt;cfabort&gt;*.
 
 
 ## Installation
