@@ -16,7 +16,7 @@ up the plugin. Now you will need to have a key-binding so you can use it. In tha
 directory there should be *sublime-keymap* files for each OS. Open the one for your particular
 operating system, and create the following:
 
-    > { "keys": [ "ctrl+alt+k" ], "command": "find_console_log" }
+    { "keys": [ "ctrl+alt+k" ], "command": "find_console_log" }
 
 Of course be sure that if there are other key bindings to add a comma where
 appropriate, as this object is technically being placed in an array with other
