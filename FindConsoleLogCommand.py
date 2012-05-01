@@ -10,10 +10,14 @@ class FindConsoleLogCommand(sublime_plugin.WindowCommand):
 		self.filePath = self.window.active_view().file_name()
 		self.fileName = os.path.basename(self.filePath)
 
+		self.patterns = [
+			r"(console\.log\(.*?\))",
+			r"(<cfdump|writedump)(.*?)(>|;)",
+			r"(<cfabort|abort)(.*?)(>|;)"
+		]
+
 		self.configureOutputView()
-
 		self.searchAndDestroy(self.filePath)
-
 		self.showView()
 
 
@@ -24,18 +28,18 @@ class FindConsoleLogCommand(sublime_plugin.WindowCommand):
 		lineNum = 0
 		f = open(file, "r")
 
+		#
+		# Search each line for patterns of items we wish to target 
+		#
 		for line in f:
 			lineNum += 1
-			for match in re.finditer(r"(console\.log\(.*?\))", line, re.IGNORECASE):
-				msg = "Match located: %s:%s : %s" % (lineNum, match.start(), match.group(0))
-				self.writeToView(msg + "\n")
-		
-			for match in re.finditer(r"(<cfdump|writedump)(.*?)(>|;)", line, re.IGNORECASE):
-				msg = "Match located: %s:%s : %s" % (lineNum, match.start(), match.group(0))
-				self.writeToView(msg + "\n")
+
+			for pattern in self.patterns:
+				for match in re.finditer(pattern, line, re.IGNORECASE):
+					msg = "Match located: %s:%s : %s" % (lineNum, match.start(), match.group(0))
+					self.writeToView(msg + "\n")
 
 		f.close()
-
 		self.writeToView(">> Complete.\n")
 
 
