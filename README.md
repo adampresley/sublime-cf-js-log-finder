@@ -1,7 +1,7 @@
-# Sublime Console/CFDUMP/Abort Finder
+# Sublime ColdFusion console/CFDUMP/CFABORT Finder
 
 ## About
-Sublime Console/CFDUMP/Abort Finder is a Sublime Text 2 plugin designed to allow
+Sublime ColdFusion console/CFDUMP/CFABORT Finder is a Sublime Text 2 plugin designed to allow
 users an easy way to find code in ColdFusion and JavaScript source that may
 contain commands like *console.log()*, *&lt;cfdump&gt;*, or *&lt;cfabort&gt;*.
 
@@ -27,7 +27,7 @@ Don't like CTRL+ALT+K for the key binding? Change it right there! :)
 
 ## License
 
-Adam's JSON Formatter - JSON beautifier
+Sublime ColdFusion console/CFDUMP/CFABORT Finder
 Copyright (C) 2011 Adam Presley
 
 This program is free software: you can redistribute it and/or modify
