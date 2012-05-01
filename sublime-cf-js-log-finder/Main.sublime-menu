@@ -1,0 +1,20 @@
+[
+    {
+        "caption": "Tools",
+        "mnemonic": "T",
+        "id": "tools",
+        "children":
+        [ 
+            {
+                "caption": "Adam Presley",
+                "id": "adampresley",
+                "children": [ 
+                    { 
+                        "command": "find_console_log",
+                        "caption": "Find console/CFDUMP/CFABORT"
+                    }
+                ]
+            }
+        ]
+    }
+]

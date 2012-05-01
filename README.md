@@ -9,20 +9,17 @@ contain commands like *console.log()*, *&lt;cfdump&gt;*, or *&lt;cfabort&gt;*.
 ## Installation
 To "install" this plugin find your User Packages directory for Sublime. In Windows 7
 this would be something to the effect of **C:\Users\me\AppData\Roaming\Sublime Text 2\Packages\User**.
-For most *nix distributions that would be **/home/me/.conf/Sublime Text 2/Packages/User**.
+For most \*nix distributions that would be **/home/me/.conf/Sublime Text 2/Packages/User**.
 
-Download the Python file for this project and place it in the above directory. This will load
-up the plugin. Now you will need to have a key-binding so you can use it. In that same user
-directory there should be *sublime-keymap* files for each OS. Open the one for your particular
-operating system, and create the following:
+Download the project and place the *sublime-cf-js-log-finder* directory into the above packages directory. 
+This will load up the plugin. It also will create menus, context menus, and a key binding. 
 
-    { "keys": [ "ctrl+alt+k" ], "command": "find_console_log" }
+Once complete you should be able to open a JavaScript or ColdFusion file and execute it one of the 
+following ways:
 
-Of course be sure that if there are other key bindings to add a comma where
-appropriate, as this object is technically being placed in an array with other
-objects.
-
-Don't like CTRL+ALT+K for the key binding? Change it right there! :)
+* CTRL + ALT + K
+* Right-click -> Adam Presley -> Find console/CFDUMP/CFABORT
+* Tools -> Adam Presley -> Find console/CFDUMP/CFABORT
 
 
 ## License
